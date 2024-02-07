@@ -8,23 +8,13 @@ Mamba-UNet: Unet-like Pure Visual Mamba for Medical Image Segmentation
 
 ## Mamba-UNet Zoo
 
-Supervised Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/MambaUNet.pdf) Released in 6/Feb/2024. [![DOI](https://zenodo.org/badge/753828586.svg)](https://zenodo.org/doi/10.5281/zenodo.10627472)
+Supervised Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/MambaUNet.pdf) Released in 6/Feb/2024.
 
 Semi-Supervised Mamba-UNet -> TBA
 
 3D Mamba-UNet -> TBA
 
-## Reference
-```
-@software{mambaunet,
-  author = {Ziyang Wang},
-  doi = {https://zenodo.org/doi/10.5281/zenodo.10627472},
-  month = {02},
-  title = {Mamba-UNet},
-  url = {https://github.com/ziyangwang007/Mamba-UNet/},
-  year = {2024}
-}
-```
+
 ## Requirements
 * Pytorch, MONAI 
 * Some basic python packages: Torchio, Numpy, Scikit-image, SimpleITK, Scipy, Medpy, nibabel, tqdm ......

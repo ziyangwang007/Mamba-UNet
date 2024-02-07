@@ -8,11 +8,11 @@ Mamba-UNet: Unet-like Pure Visual Mamba for Medical Image Segmentation
 
 ## Mamba-UNet Zoo
 
-Supervised Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/Report.pdf) Released in 6/Feb/2024. [![DOI](https://zenodo.org/badge/753828586.svg)](https://zenodo.org/doi/10.5281/zenodo.10627472)
+Supervised Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/MambaUNet.pdf) Released in 6/Feb/2024. [![DOI](https://zenodo.org/badge/753828586.svg)](https://zenodo.org/doi/10.5281/zenodo.10627472)
 
+Semi-Supervised Mamba-UNet -> TBA
 
-Semi-Supervised Mamba-UNey -> TBA
-
+3D Mamba-UNet -> TBA
 
 ## Reference
 ```

@@ -1,7 +1,6 @@
 # Mamba-UNet
 
 Mamba-UNet: Unet-like Pure Visual Mamba for Medical Image Segmentation
-[![DOI](https://zenodo.org/badge/753828586.svg)](https://zenodo.org/doi/10.5281/zenodo.10627472)
 
 <img src="intro.png">
 <img src="framework.png">

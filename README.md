@@ -1,8 +1,30 @@
 # Mamba-UNet
 
+Mamba-UNet: Unet-like Pure Visual Mamba for Medical Image Segmentation
+[![DOI](https://zenodo.org/badge/753828586.svg)](https://zenodo.org/doi/10.5281/zenodo.10627472)
+
+<img src="intro.png">
+<img src="framework.png">
 
 
+## Mamba-UNet Zoo
 
+Supervised Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/Report.pdf) Released in 6/Feb/2024.
+
+Semi-Supervised Mamba-UNey -> TBA
+
+
+## Reference
+```
+@software{mambaunet,
+  author = {Ziyang Wang},
+  doi = {https://zenodo.org/doi/10.5281/zenodo.10627472},
+  month = {02},
+  title = {Mamba-UNet},
+  url = {https://github.com/ziyangwang007/Mamba-UNet/},
+  year = {2024}
+}
+```
 ## Requirements
 * Pytorch, MONAI 
 * Some basic python packages: Torchio, Numpy, Scikit-image, SimpleITK, Scipy, Medpy, nibabel, tqdm ......
@@ -60,4 +82,4 @@ python test_2D_fully.py --root_path ../data/ACDC --exp ACDC/xxx --model xxx
 
 
 ## Acknowledgement
-SSL4MIS, Segmamba
+SSL4MIS, Segmamba, SwinUNet

@@ -23,7 +23,7 @@ Mamba-UNet
 
 Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/MambaUNet.pdf) Released in 6/Feb/2024.
 
-Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/Semi_Mamba_UNet.pdf) Released in 10/Feb/2024.
+Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/SemiMambaUNet.pdf) Released in 10/Feb/2024.
 
 3D Mamba-UNet -> TBA
 

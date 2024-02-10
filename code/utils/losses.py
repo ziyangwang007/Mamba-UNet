@@ -13,7 +13,21 @@ warnings.filterwarnings("ignore")
 
 
 
+def ConstraLoss(inputs, targets):
 
+    m=nn.AdaptiveAvgPool2d(1)
+    input_pro = m(inputs)
+    input_pro = input_pro.view(inputs.size(0),-1) #N*C
+    targets_pro = m(targets)
+    targets_pro = targets_pro.view(targets.size(0),-1)#N*C
+    input_normal = nn.functional.normalize(input_pro,p=2,dim=1) # 正则化
+    targets_normal = nn.functional.normalize(targets_pro,p=2,dim=1)
+    res = (input_normal - targets_normal)
+    res = res * res
+    loss = torch.mean(res)
+    return loss
+
+    
 def dice_loss(score, target):
     target = target.float()
     smooth = 1e-5

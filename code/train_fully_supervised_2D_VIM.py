@@ -20,7 +20,7 @@ from torchvision import transforms
 from torchvision.utils import make_grid
 from tqdm import tqdm
 from networks.vision_transformer import SwinUnet as ViT_seg
-from networks.vision_mamba import MambaUnet as VIM
+from networks.vision_mamba import MambaUnet as VIM_seg
 
 from config import get_config
 
@@ -36,7 +36,7 @@ parser.add_argument('--root_path', type=str,
 parser.add_argument('--exp', type=str,
                     default='ACDC/Fully_Supervised', help='experiment_name')
 parser.add_argument('--model', type=str,
-                    default='VIM', help='model_name')
+                    default='mambaunet', help='model_name')
 parser.add_argument('--num_classes', type=int,  default=4,
                     help='output channel of network')
 
@@ -109,7 +109,7 @@ def train(args, snapshot_path):
 
 
 
-    model = VIM(config, img_size=args.patch_size,
+    model = VIM_seg(config, img_size=args.patch_size,
                      num_classes=args.num_classes).cuda()
     model.load_from(config)
 

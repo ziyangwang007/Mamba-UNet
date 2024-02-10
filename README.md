@@ -103,7 +103,12 @@ A: I am glad to see and acknowledge that there should be similar work. Mamba is 
 
 ## Reference
 ```
-
+@article{wang2024mamba,
+  title={Mamba-UNet: UNet-Like Pure Visual Mamba for Medical Image Segmentation},
+  author={Wang, Ziyang and others},
+  journal={arXiv preprint arXiv:2402.05079},
+  year={2024}
+}
 
 ```
 

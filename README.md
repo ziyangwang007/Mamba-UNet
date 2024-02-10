@@ -2,8 +2,16 @@
 
 Mamba-UNet: Unet-like Pure Visual Mamba for Medical Image Segmentation
 
-<img src="intro.png">
-<img src="framework.png">
+The position of Mamba-UNet
+<img src="netintro.png" width="50%" height="auto">
+
+
+The position of Semi-Mamba-UNet
+<img src="sslintro.png" width="50%" height="auto">
+
+
+Mamba-UNet
+<img src="framework.png"width="50%" height="auto">
 
 
 ## Mamba-UNet Zoo
@@ -87,6 +95,14 @@ A: Please do not worry. The performance depends on many factors, such as how the
 2. Q: Concurrent Work: I found similar work about the integration of Mamba into UNet.
 
 A: I am glad to see and acknowledge that there should be similar work. Mamba is a novel architecture, and it is obviously valuable to explore integrating Mamba with segmentation, detection, registration, etc. I am pleased that we all find Mamba efficient in some cases. This GitHub repository was developed on the 6th of February 2024, and I would not be surprised if people have proposed similar work from the end of 2023 to future. Also, I have only tested a limited number of baseline methods with a single dataset. Please make sure to read other related work around Mamba/Visual Mamba with UNet/VGG/ etc.
+
+
+
+## Reference
+```
+
+
+```
 
 
 ## Acknowledgement

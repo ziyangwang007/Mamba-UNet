@@ -3,15 +3,18 @@
 Mamba-UNet: Unet-like Pure Visual Mamba for Medical Image Segmentation
 
 The position of Mamba-UNet
+
 <img src="netintro.png" width="50%" height="auto">
 
 
 The position of Semi-Mamba-UNet
+
 <img src="sslintro.png" width="50%" height="auto">
 
 
 Mamba-UNet
-<img src="framework.png"width="50%" height="auto">
+
+<img src="framework.png" width="50%" height="auto">
 
 
 ## Mamba-UNet Zoo

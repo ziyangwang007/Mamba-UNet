@@ -7,6 +7,8 @@ The position of Mamba-UNet
 <img src="netintro.png" width="50%" height="auto">
 
 
+Semi-Mamba-UNet: Pixel-Level Contrastive Cross-Supervised Visual Mamba-based UNet for Semi-Supervised Medical Image Segmentation
+
 The position of Semi-Mamba-UNet
 
 <img src="sslintro.png" width="50%" height="auto">

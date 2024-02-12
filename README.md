@@ -86,7 +86,27 @@ python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_U
 python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
 ```
 
-9. Test
+9. Train UNet with Mean Teacher when 5% as labeled data
+```
+python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
+```
+
+10. Train SwinUNet with Mean Teacher when 5% as labeled data
+```
+python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
+```
+
+11. Train UNet with Mean Teacher when 10% as labeled data
+```
+python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
+```
+
+12. Train SwinUNet with Mean Teacher when 10% as labeled data
+```
+python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
+```
+
+13. Test
 ```
 python test_2D_fully.py --root_path ../data/ACDC --exp ACDC/xxx --model xxx
 ```
@@ -101,7 +121,11 @@ A: Please do not worry. The performance depends on many factors, such as how the
 
 A: I am glad to see and acknowledge that there should be similar work. Mamba is a novel architecture, and it is obviously valuable to explore integrating Mamba with segmentation, detection, registration, etc. I am pleased that we all find Mamba efficient in some cases. This GitHub repository was developed on the 6th of February 2024, and I would not be surprised if people have proposed similar work from the end of 2023 to future. Also, I have only tested a limited number of baseline methods with a single dataset. Please make sure to read other related work around Mamba/Visual Mamba with UNet/VGG/ etc.
 
-3. Q: Colloboration: I would like to discuss with other topic, like Image Registration, Human Pose Estimation, Image Fusion, and etc.
+3. Q: Other Dataset: I want to try MambaUNet with other dataset, do you have any suggestions?
+
+A: It's advisable to start with UNet, as it often proves to be the most efficient architecture. Based on my experience with various segmentation datasets, UNet can outperform alternatives like TransUNet and SwinUNet. Therefore, UNet should be your first choice. Transformer-based UNet variants, which depend on pretraining, have shown promising results, especially with larger datasets—although such extensive datasets are uncommon in medical imaging. In my view, MambaUNet not only offers greater efficiency but also more promising performance compared to Transformer models. However, it's crucial to remember that MambaUNet, like Transformer models, necessitates pretraining (for example, on ImageNet).
+
+4. Q: Colloboration: I would like to discuss with other topic, like Image Registration, Human Pose Estimation, Image Fusion, and etc.
 
 A: I would also like to do some amazing work. Connect with me via ziyang [dot] wang17 [at] gmail [dot] com.
 
@@ -118,4 +142,4 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 
 
 ## Acknowledgement
-SSL4MIS, Segmamba, SwinUNet
+SSL4MIS, Segmamba, SwinUNet, Visual Mamba

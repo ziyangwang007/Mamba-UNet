@@ -139,6 +139,12 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
   year={2024}
 }
 
+@article{wang2024semimamba,
+  title={Semi-Mamba-UNet: Pixel-Level Contrastive Cross-Supervised Visual Mamba-based UNet for Semi-Supervised Medical Image Segmentation},
+  author={Wang, Ziyang and others},
+  journal={arXiv preprint arXiv:2402.07245},
+  year={2024}
+}
 ```
 
 

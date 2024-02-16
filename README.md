@@ -154,6 +154,13 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
   journal={arXiv preprint arXiv:2402.07245},
   year={2024}
 }
+
+@article{wang2024weakmamba,
+  title={Weak-Mamba-UNet: Visual Mamba Makes CNN and ViT Work Better for Scribble-based Medical Image Segmentation},
+  author={Wang, Ziyang and others},
+  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  year={2024}
+}
 ```
 
 

@@ -13,6 +13,11 @@ The position of Semi-Mamba-UNet
 
 <img src="sslintro.png" width="50%" height="auto">
 
+Weak-Mamba-UNet: Visual Mamba Makes CNN and ViT Work Better for Scribble-based Medical Image Segmentation
+
+The introduction of Scribble Annotation
+
+<img src="wslintro.png" width="50%" height="auto">
 
 Mamba-UNet
 

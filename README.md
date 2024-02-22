@@ -29,14 +29,13 @@ Mamba-UNet
 - [x] Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/MambaUNet.pdf) Released in 6/Feb/2024.
 - [x] Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/SemiMambaUNet.pdf) Released in 10/Feb/2024.
 - [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/WeakMambaUNet.pdf) Released in 16/Feb/2024.
-
 - [x] Code for Mamba-UNet
 - [x] Code for Semi-Mamba-UNet
 - [ ] Code for Weak-Mamba-UNet (in Progress, released soon.)
-- [ ] TotalSegmentator Dataset (in Progress, released soon.)
+- [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
 - [ ] 3D Mamba-UNet 
 - [ ] VMambaMorph
-- [ ] Multi-Atlas Abdomen Labeling Challenge Dataset 
+- [ ] Dataset with Multi-Atlas Abdomen Labeling Challenge Dataset 
 
 
 ## Requirements

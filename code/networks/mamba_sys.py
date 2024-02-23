@@ -603,7 +603,24 @@ class SSA2D(nn.Module):
                             **factory_kwargs,
                 )
             ]
-        self.conv2d = nn.Sequential(*blocks)
+        self.conv2d1 = nn.Sequential(*blocks)
+        for dilate in dilate_rate:
+            # blocks += [self.Norm(output_dim), self.Act, self.Conv(output_dim, output_dim, kernel_size=3, stride=1, padding=dilate, dilation=dilate)]
+            blocks += [
+                self.act,
+                self.Conv(
+                            in_channels=self.d_inner,
+                            out_channels=self.d_inner,
+                            groups=self.d_inner,
+                            bias=conv_bias,
+                            kernel_size=d_conv,
+                            padding=dilate*(d_conv - 1) // 2,
+                            dilation=dilate,
+                            stride=1,
+                            **factory_kwargs,
+                )
+            ]
+        self.conv2d2 = nn.Sequential(*blocks)
 
         self.x_proj = (
             nn.Linear(self.d_inner, (self.dt_rank + self.d_state * 2), bias=False, **factory_kwargs),
@@ -838,7 +855,9 @@ class SSA2D(nn.Module):
 
         x = x.permute(0, 3, 1, 2).contiguous()
         # x = self.act(self.conv2d(x))  # (b, d, h, w)
-        x = self.act(self.conv2d(x)+x)  # (b, d, h, w)
+        x = self.act(self.conv2d1(x) + x)  # (b, d, h, w)
+        x = self.act(self.conv2d2(x) + x)  # (b, d, h, w)
+
         y = self.forward_core(x)
         y = y * F.silu(z)
         out = self.out_proj(y)

@@ -75,7 +75,7 @@ Download ACDC for Semi-/Supervised learning through [Google Drive](https://drive
 
 Download ACDC for Weak-Supervised learning through [Google Drive](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), and save in 'data' folder.
 
-Download Multi-Atlas Abdomen Labeling Challenge Dataset through [Google Drive] through Official Website [Link](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480), or [Google Drive](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), and save in 'data/Synapse' folder.
+Download Multi-Atlas Abdomen Labeling Challenge Dataset through Official Website [Link](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480), or [Google Drive](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), and save in 'data/Synapse' folder.
 
 
 4. Train 2D UNet
@@ -156,7 +156,7 @@ A: Please do not worry. The performance depends on many factors, such as how the
 
 2. Q: Network Block: What is the network block you used? What is the difference between Mamba-XXXNet?
 
-A: I understand that there are so many Mamba related papers now, such as Vision Mamba, Visual Mamba, SegMemba... In this project, I integrate VMamba into U-shape network. The reference of VMamba is: Liu, Yue, et al. "Vmamba: Visual state space model." arXiv preprint arXiv:2401.10166 (2024).
+A: I understand that there are so many Mamba related papers now, such as Vision Mamba, Visual Mamba, SegMamba... In this project, I integrate VMamba into U-shape network. The reference of VMamba is: Liu, Yue, et al. "Vmamba: Visual state space model." arXiv preprint arXiv:2401.10166 (2024).
 
 3. Q: Concurrent Work: I found similar work about the integration of Mamba into UNet.
 

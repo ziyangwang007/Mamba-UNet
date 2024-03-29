@@ -31,11 +31,13 @@ Mamba-UNet
 - [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/WeakMambaUNet.pdf) Released in 16/Feb/2024.
 - [x] Code for Mamba-UNet
 - [x] Code for Semi-Mamba-UNet
-- [ ] Code for Weak-Mamba-UNet (in Progress, released soon.)
+- [x] Dataset with Multi-Atlas Abdomen Labeling Challenge Dataset 
+- [x] Code for Weak-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Weak-Mamba-UNet)
 - [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
+- [ ] VMambaMorph (in Progress, released soon.)
 - [ ] 3D Mamba-UNet 
-- [ ] VMambaMorph
-- [ ] Dataset with Multi-Atlas Abdomen Labeling Challenge Dataset 
+
+
 
 
 ## Requirements
@@ -69,7 +71,11 @@ Download through [Google Drive](https://drive.google.com/file/d/14RzbbBDjbKbgr0o
 
 3. Download Dataset
 
-Download ACDC for Semi-/Supervised learning through [Google Drive](https://drive.google.com/file/d/1F3JzBSIURtFJkfcExBcT6Hu7Ar5_f8uv/view?usp=sharing), and save in 'data/ACDC' folder. Download ACDC for Weak-Supervised learning through [Google Drive](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), and save in 'data' folder.
+Download ACDC for Semi-/Supervised learning through [Google Drive](https://drive.google.com/file/d/1F3JzBSIURtFJkfcExBcT6Hu7Ar5_f8uv/view?usp=sharing), and save in 'data/ACDC' folder. 
+
+Download ACDC for Weak-Supervised learning through [Google Drive](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), and save in 'data' folder.
+
+Download Multi-Atlas Abdomen Labeling Challenge Dataset through [Google Drive] through Official Website [Link](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480), or [Google Drive](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), and save in 'data/Synapse' folder.
 
 
 4. Train 2D UNet

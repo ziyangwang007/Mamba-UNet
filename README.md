@@ -34,14 +34,14 @@ Project
 - [ ] 3D Mamba-UNet 
 
 Code
-- [x] Code for Mamba-UNet
-- [x] Code for Semi-Mamba-UNet
+- [x] Code for Mamba-UNet -> [Link](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_fully_supervised_2D_VIM.py)
+- [x] Code for Semi-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_Semi_Mamba_UNet.py)
 - [x] Code for Weak-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Weak-Mamba-UNet)
 - [ ] Code for VMambaMorph 
 
 More Experimnents
-- [x] Dataset with ACDC MICCAI Challenge Dataset 
-- [x] Dataset with Synapse Abdomen MICCAI Challenge Dataset 
+- [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset 
+- [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset 
 - [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
 
 

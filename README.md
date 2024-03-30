@@ -26,17 +26,23 @@ Mamba-UNet
 
 ## Mamba-UNet Zoo
 
+Project
 - [x] Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/MambaUNet.pdf) 
 - [x] Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/SemiMambaUNet.pdf) 
 - [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/WeakMambaUNet.pdf)
-- [x] Code for Mamba-UNet
-- [x] Code for Semi-Mamba-UNet
-- [x] Dataset with Multi-Atlas Abdomen Labeling Challenge Dataset 
-- [x] Code for Weak-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Weak-Mamba-UNet)
-- [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
 - [ ] VMambaMorph (in Progress, released soon.)
 - [ ] 3D Mamba-UNet 
 
+Code
+- [x] Code for Mamba-UNet
+- [x] Code for Semi-Mamba-UNet
+- [x] Code for Weak-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Weak-Mamba-UNet)
+- [ ] Code for VMambaMorph 
+
+More Experimnents
+- [x] Dataset with ACDC MICCAI Challenge Dataset 
+- [x] Dataset with Synapse Abdomen MICCAI Challenge Dataset 
+- [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
 
 
 

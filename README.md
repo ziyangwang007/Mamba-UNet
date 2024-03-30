@@ -4,24 +4,24 @@ Mamba-UNet: Unet-like Pure Visual Mamba for Medical Image Segmentation
 
 The position of Mamba-UNet
 
-<img src="netintro.png" width="50%" height="auto">
+<img src="img/netintro.png" width="50%" height="auto">
 
 
 Semi-Mamba-UNet: Pixel-Level Contrastive Cross-Supervised Visual Mamba-based UNet for Semi-Supervised Medical Image Segmentation
 
 The position of Semi-Mamba-UNet
 
-<img src="sslintro.png" width="50%" height="auto">
+<img src="img/sslintro.png" width="50%" height="auto">
 
 Weak-Mamba-UNet: Visual Mamba Makes CNN and ViT Work Better for Scribble-based Medical Image Segmentation
 
 The introduction of Scribble Annotation
 
-<img src="wslintro.png" width="50%" height="auto">
+<img src="img/wslintro.png" width="50%" height="auto">
 
 Mamba-UNet
 
-<img src="framework.png" width="50%" height="auto">
+<img src="img/framework.png" width="50%" height="auto">
 
 
 ## Mamba-UNet Zoo
@@ -44,6 +44,8 @@ More Experimnents
 - [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset 
 - [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
 
+## Results
+<img src="img/results.jpg" width="90%" height="auto">
 
 
 ## Requirements

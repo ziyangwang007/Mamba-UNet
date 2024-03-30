@@ -24,12 +24,19 @@ Mamba-UNet
 <img src="img/framework.png" width="50%" height="auto">
 
 
+
+## Results
+<img src="img/results.jpg" width="70%" height="auto">
+
+
+
+
 ## Mamba-UNet Zoo
 
 Project
-- [x] Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/MambaUNet.pdf) 
-- [x] Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/SemiMambaUNet.pdf) 
-- [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/WeakMambaUNet.pdf)
+- [x] Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/MambaUNet.pdf) 
+- [x] Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/SemiMambaUNet.pdf) 
+- [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/WeakMambaUNet.pdf)
 - [ ] VMambaMorph (in Progress, released soon.)
 - [ ] 3D Mamba-UNet 
 
@@ -43,9 +50,6 @@ More Experimnents
 - [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset 
 - [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset 
 - [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
-
-## Results
-<img src="img/results.jpg" width="90%" height="auto">
 
 
 ## Requirements

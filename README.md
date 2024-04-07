@@ -215,7 +215,7 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
   year={2024}
 }
 
-@article{wang2024weakmamba,
+@article{wang2024morph,
   title={VMambaMorph: a Visual Mamba-based Framework with Cross-Scan Module for Deformable 3D Image Registration},
   author={Wang, Ziyang and others},
   journal={arXiv preprint arXiv:2402.xxxxx},

@@ -1,5 +1,30 @@
 # Mamba-UNet
 
+
+
+## Mamba-UNet Zoo
+
+Project
+- [x] Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/MambaUNet.pdf) 
+- [x] Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/SemiMambaUNet.pdf) 
+- [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/WeakMambaUNet.pdf)
+- [x] VMambaMorph -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/VMambaMorph.pdf)
+
+
+Code
+- [x] Code for Mamba-UNet -> [Link](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_fully_supervised_2D_VIM.py)
+- [x] Code for Semi-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_Semi_Mamba_UNet.py)
+- [x] Code for Weak-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Weak-Mamba-UNet)
+- [x] Code for VMambaMorph -> [Link](https://github.com/ziyangwang007/VMambaMorph)
+
+More Experimnents
+- [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset 
+- [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset 
+- [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
+
+
+## Graphical Abstract
+
 Mamba-UNet: Unet-like Pure Visual Mamba for Medical Image Segmentation
 
 The position of Mamba-UNet
@@ -34,27 +59,6 @@ Mamba-UNet
 <img src="img/results.jpg" width="70%" height="auto">
 
 
-
-
-## Mamba-UNet Zoo
-
-Project
-- [x] Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/MambaUNet.pdf) 
-- [x] Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/SemiMambaUNet.pdf) 
-- [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/WeakMambaUNet.pdf)
-- [x] VMambaMorph -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/VMambaMorph.pdf)
-
-
-Code
-- [x] Code for Mamba-UNet -> [Link](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_fully_supervised_2D_VIM.py)
-- [x] Code for Semi-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_Semi_Mamba_UNet.py)
-- [x] Code for Weak-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Weak-Mamba-UNet)
-- [x] Code for VMambaMorph -> [Link](https://github.com/ziyangwang007/VMambaMorph)
-
-More Experimnents
-- [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset 
-- [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset 
-- [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
 
 
 ## Requirements

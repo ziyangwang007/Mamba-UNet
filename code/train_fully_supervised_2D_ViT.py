@@ -32,7 +32,7 @@ from scipy.ndimage import zoom
 from scipy.ndimage.interpolation import zoom
 
 from dataloaders import utils
-from dataloaders.dataset import BaseDataSets, RandomGenerator
+from dataloaders.dataset import BaseDataSets, RandomGenerator, BaseDataSets_Synapse
 from networks.net_factory import net_factory
 from networks.vision_transformer import SwinUnet as ViT_seg
 # from networks.vision_mamba import MambaUnet as VIM

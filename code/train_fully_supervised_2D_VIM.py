@@ -25,7 +25,7 @@ from networks.vision_mamba import MambaUnet as VIM_seg
 from config import get_config
 
 from dataloaders import utils
-from dataloaders.dataset import BaseDataSets, RandomGenerator
+from dataloaders.dataset import BaseDataSets, RandomGenerator, BaseDataSets_Synapse
 from networks.net_factory import net_factory
 from utils import losses, metrics, ramps
 from val_2D import test_single_volume, test_single_volume_ds

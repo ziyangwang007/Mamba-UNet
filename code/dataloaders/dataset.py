@@ -42,6 +42,12 @@ class BaseDataSets(Dataset):
             with open(self._base_dir + "/train_slices.list", "r") as f1:
                 self.sample_list = f1.readlines()
             self.sample_list = [item.replace("\n", "") for item in self.sample_list]
+            # # 计算要选择的数据数量（10%）
+            # num_samples = len(self.sample_list)
+            # num_samples_to_select = int(1 * num_samples)
+            # # 随机选择数据
+            # selected_samples = random.sample(self.sample_list, num_samples_to_select)
+            # self.sample_list = selected_samples
 
         elif self.split == "val":
             with open(self._base_dir + "/val.list", "r") as f:
@@ -62,8 +68,6 @@ class BaseDataSets(Dataset):
             h5f = h5py.File(self._base_dir + "/data/{}.h5".format(case), "r")
         image = h5f["image"][:]
         label = h5f["label"][:]
-        # print(image.shape, label.shape)
-        # print('*'*10)
         sample = {"image": image, "label": label}
         if self.split == "train":
             if None not in (self.ops_weak, self.ops_strong):
@@ -73,6 +77,69 @@ class BaseDataSets(Dataset):
         sample["idx"] = idx
         return sample
 
+class BaseDataSets_Synapse(Dataset):
+    def __init__(
+        self,
+        base_dir=None,
+        split="train",
+        num=None,
+        transform=None,
+        ops_weak=None,
+        ops_strong=None,
+    ):
+        self._base_dir = base_dir
+        self.sample_list = []
+        self.split = split
+        self.transform = transform
+        self.ops_weak = ops_weak
+        self.ops_strong = ops_strong
+
+        assert bool(ops_weak) == bool(
+            ops_strong
+        ), "For using CTAugment learned policies, provide both weak and strong batch augmentation policy"
+
+        if self.split == "train":
+            with open(self._base_dir + "/train_slices.txt", "r") as f1:
+                self.sample_list = f1.readlines()
+            self.sample_list = [item.replace("\n", "") for item in self.sample_list]
+            # # 计算要选择的数据数量（10%）
+            # num_samples = len(self.sample_list)
+            # num_samples_to_select = int(1 * num_samples)
+            # # 随机选择数据
+            # selected_samples = random.sample(self.sample_list, num_samples_to_select)
+            # self.sample_list = selected_samples
+
+        elif self.split == "val":
+            with open(self._base_dir + "/val.txt", "r") as f:
+                self.sample_list = f.readlines()
+            self.sample_list = [item.replace("\n", "") for item in self.sample_list]
+        if num is not None and self.split == "train":
+            self.sample_list = self.sample_list[:num]
+        print("total {} samples".format(len(self.sample_list)))
+
+    def __len__(self):
+        return len(self.sample_list)
+
+    def __getitem__(self, idx):
+        case = self.sample_list[idx]
+        if self.split == "train":
+            h5f = np.load(self._base_dir + "/train_npz/{}.npz".format(case))
+        else:
+            if self.split == "val":
+                h5f = h5py.File(self._base_dir + "/test_vol_h5/{}.npy.h5".format(case))
+            else:
+                h5f = h5py.File(self._base_dir + "/test_vol_h5/{}.npy.h5".format(case))
+                
+        image = np.array(h5f["image"])
+        label = np.array(h5f["label"])
+        sample = {"image": image, "label": label}
+        if self.split == "train":
+            if None not in (self.ops_weak, self.ops_strong):
+                sample = self.transform(sample, self.ops_weak, self.ops_strong)
+            else:
+                sample = self.transform(sample)
+        sample["idx"] = idx
+        return sample
 
 def random_rot_flip(image, label=None):
     k = np.random.randint(0, 4)
@@ -170,6 +237,7 @@ class RandomGenerator(object):
 
 class WeakStrongAugment(object):
     """returns weakly and strongly augmented images
+
     Args:
         object (tuple): output size of network
     """
@@ -205,6 +273,7 @@ class WeakStrongAugment(object):
 
 class TwoStreamBatchSampler(Sampler):
     """Iterate two sets of indices
+
     An 'epoch' is one iteration through the primary indices.
     During the epoch, the secondary indices are iterated through
     as many times as needed.

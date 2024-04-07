@@ -20,7 +20,7 @@ from tqdm import tqdm
 from networks.vision_mamba import MambaUnet as ViM_seg
 from config import get_config
 from dataloaders import utils
-from dataloaders.dataset import (BaseDataSets, RandomGenerator,
+from dataloaders.dataset import (BaseDataSets, RandomGenerator, BaseDataSets_Synapse,
                                  TwoStreamBatchSampler)
 from networks.net_factory import net_factory
 from networks.vision_transformer import SwinUnet as ViT_seg

@@ -58,12 +58,16 @@ Mamba-UNet
 ## Results
 
 Mamba-UNet
+
 <img src="img/results.jpg" width="70%" height="auto">
 
-VMambaMorph:
+VMambaMorph
+
 <img src="img/history.png" width="70%" height="auto">
 
+<sub>Mamba-UNet: All the baseline methods/datasets are with same hyper-parameter setting (10,000 iterations, learning rate, optimizer and etc)</sub>.
 
+<sub>VMambaMorph: All the baseline methods are with same hyper-parameter setting (300 epoches, learning rate, optimizer and etc)</sub>.
 
 ## Requirements
 * Pytorch, MONAI 

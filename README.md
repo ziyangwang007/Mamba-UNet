@@ -56,8 +56,12 @@ Mamba-UNet
 
 
 ## Results
+
+Mamba-UNet
 <img src="img/results.jpg" width="70%" height="auto">
 
+VMambaMorph:
+<img src="img/history.png" width="70%" height="auto">
 
 
 

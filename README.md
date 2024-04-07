@@ -19,6 +19,11 @@ The introduction of Scribble Annotation
 
 <img src="img/wslintro.png" width="50%" height="auto">
 
+VMambaMorph: a Visual Mamba-based Framework with Cross-Scan Module for Deformable 3D Image Registration
+
+<img src="img/morph.png" width="50%" height="auto">
+
+
 Mamba-UNet
 
 <img src="img/framework.png" width="50%" height="auto">
@@ -37,14 +42,14 @@ Project
 - [x] Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/MambaUNet.pdf) 
 - [x] Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/SemiMambaUNet.pdf) 
 - [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/WeakMambaUNet.pdf)
-- [ ] VMambaMorph (in Progress, released soon.)
-- [ ] 3D Mamba-UNet 
+- [x] VMambaMorph -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/VMambaMorph.pdf)
+
 
 Code
 - [x] Code for Mamba-UNet -> [Link](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_fully_supervised_2D_VIM.py)
 - [x] Code for Semi-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_Semi_Mamba_UNet.py)
 - [x] Code for Weak-Mamba-UNet -> [Link](https://github.com/ziyangwang007/Weak-Mamba-UNet)
-- [ ] Code for VMambaMorph 
+- [x] Code for VMambaMorph -> [Link](https://github.com/ziyangwang007/VMambaMorph)
 
 More Experimnents
 - [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset 

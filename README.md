@@ -225,7 +225,7 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 }
 
 @article{wang2024morph,
-  title={VMambaMorph: a Visual Mamba-based Framework with Cross-Scan Module for Deformable 3D Image Registration},
+  title={VMambaMorph: a Multi-Modality Deformable Image Registration Framework based on Visual State Space Model with Cross-Scan Module},
   author={Wang, Ziyang and others},
   journal={arXiv preprint arXiv:2404.05105},
   year={2024}

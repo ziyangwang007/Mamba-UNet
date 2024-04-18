@@ -74,13 +74,13 @@ VMambaMorph
 * Pytorch, MONAI 
 * Some basic python packages: Torchio, Numpy, Scikit-image, SimpleITK, Scipy, Medpy, nibabel, tqdm ......
 
-```
+```shell
 cd casual-conv1d
 
 python setup.py install
 ```
 
-```
+```shell
 cd mamba
 
 python setup.py install
@@ -90,7 +90,7 @@ python setup.py install
 ## Usage
 
 1. Clone the repo:
-```
+```shell
 git clone https://github.com/ziyangwang007/Mamba-UNet.git 
 cd Mamba-UNet
 ```
@@ -109,72 +109,72 @@ Download Multi-Atlas Abdomen Labeling Challenge Dataset through Official Website
 
 
 4. Train 2D UNet
-```
+```shell
 python train_fully_supervised_2D.py --root_path ../data/ACDC --exp ACDC/unet --model unet --max_iterations 10000 --batch_size 24
 ```
 
 5. Train SwinUNet
-```
+```shell
 python train_fully_supervised_2D_ViT.py --root_path ../data/ACDC --exp ACDC/swinunet --model swinunet --max_iterations 10000 --batch_size 24
 ```
 
 6. Train Mamba-UNet
-```
+```shell
 python train_fully_supervised_2D_VIM.py --root_path ../data/ACDC --exp ACDC/VIM --model mambaunet --max_iterations 10000 --batch_size 24 
 ```
 
 7. Train Semi-Mamba-UNet when 5% as labeled data
-```
+```shell
 python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
 ```
 
 8. Train Semi-Mamba-UNet when 10% as labeled data
-```
+```shell
 python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
 ```
 
 9. Train UNet with Mean Teacher when 5% as labeled data
-```
+```shell
 python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
 ```
 
 10. Train SwinUNet with Mean Teacher when 5% as labeled data
-```
+```shell
 python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
 ```
 
 11. Train UNet with Mean Teacher when 10% as labeled data
-```
+```shell
 python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
 ```
 
 12. Train SwinUNet with Mean Teacher when 10% as labeled data
-```
+```shell
 python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
 ```
 
 13. Train UNet with Uncertainty Aware Mean Teacher when 5% as labeled data
-```
+```shell
 python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
 ```
 
 14. Train SwinUNet with Uncertainty Aware Mean Teacher when 5% as labeled data
-```
+```shell
 python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
 ```
 
 15. Train UNet with Uncertainty Aware Mean Teacher when 10% as labeled data
-```
+```shell
 python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
 ```
 
 16. Train SwinUNet with Uncertainty Aware Mean Teacher when 10% as labeled data
-```
+```shell
 python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
 ```
 
 17. Test
-```
+```shell
 python test_2D_fully.py --root_path ../data/ACDC --exp ACDC/xxx --model xxx
 ```
 
@@ -202,7 +202,7 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 
 
 ## Reference
-```
+```bibtex
 @article{wang2024mamba,
   title={Mamba-UNet: UNet-Like Pure Visual Mamba for Medical Image Segmentation},
   author={Wang, Ziyang and others},
@@ -224,7 +224,7 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
   year={2024}
 }
 
-@article{wang2024morph,
+@article{wang2024vmorph,
   title={VMambaMorph: a Multi-Modality Deformable Image Registration Framework based on Visual State Space Model with Cross-Scan Module},
   author={Wang, Ziyang and others},
   journal={arXiv preprint arXiv:2404.05105},

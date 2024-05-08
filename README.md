@@ -179,6 +179,11 @@ python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC -
 python test_2D_fully.py --root_path ../data/ACDC --exp ACDC/xxx --model xxx
 ```
 
+18. Image Registration
+
+The training and testing for VoxelMorph, TransMorph, MambaMorph, and VMambaMorph can be checked through [[Link]](https://github.com/ziyangwang007/VMambaMorph)
+
+
 ## Q&A
 
 1. Q: Performance: I find my results are slightly lower than your reported results.
@@ -225,7 +230,8 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 }
 
 @article{wang2024vmambamorph,
-  title={Vmambamorph: a visual mamba-based framework with cross-scan module for deformable 3d image registration},
+  title={VMambaMorph: a Multi-Modality Deformable Image Registration Framework based on Visual State Space Model with Cross-Scan Module
+},
   author={Wang, Ziyang and Zheng, Jian-Qing and Ma, Chao and Guo, Tao},
   journal={arXiv preprint arXiv:2404.05105},
   year={2024}

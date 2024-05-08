@@ -22,6 +22,7 @@ Code
 More Experimnents
 - [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset 
 - [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset 
+- [x] Dataset with Prostate MR MICCAI Challenge Dataset 
 - [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
 
 
@@ -204,29 +205,28 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 ## Reference
 ```bibtex
 @article{wang2024mamba,
-  title={Mamba-UNet: UNet-Like Pure Visual Mamba for Medical Image Segmentation},
-  author={Wang, Ziyang and others},
+  title={Mamba-unet: Unet-like pure visual mamba for medical image segmentation},
+  author={Wang, Ziyang and Zheng, Jian-Qing and Zhang, Yichi and Cui, Ge and Li, Lei},
   journal={arXiv preprint arXiv:2402.05079},
   year={2024}
 }
-
-@article{wang2024semimamba,
-  title={Semi-Mamba-UNet: Pixel-Level Contrastive Cross-Supervised Visual Mamba-based UNet for Semi-Supervised Medical Image Segmentation},
-  author={Wang, Ziyang and others},
+@article{ma2024semimamba,
+  title={Semi-Mamba-UNet: Pixel-Level Contrastive and Pixel-Level Cross-Supervised Visual Mamba-based UNet for Semi-Supervised Medical Image Segmentation},
+  author={Ma, Chao and Wang, Ziyang},
   journal={arXiv preprint arXiv:2402.07245},
   year={2024}
 }
 
 @article{wang2024weakmamba,
   title={Weak-Mamba-UNet: Visual Mamba Makes CNN and ViT Work Better for Scribble-based Medical Image Segmentation},
-  author={Wang, Ziyang and others},
+  author={Wang, Ziyang and Ma, Chao},
   journal={arXiv preprint arXiv:2402.10887},
   year={2024}
 }
 
-@article{wang2024vmorph,
-  title={VMambaMorph: a Multi-Modality Deformable Image Registration Framework based on Visual State Space Model with Cross-Scan Module},
-  author={Wang, Ziyang and others},
+@article{wang2024vmambamorph,
+  title={Vmambamorph: a visual mamba-based framework with cross-scan module for deformable 3d image registration},
+  author={Wang, Ziyang and Zheng, Jian-Qing and Ma, Chao and Guo, Tao},
   journal={arXiv preprint arXiv:2404.05105},
   year={2024}
 }

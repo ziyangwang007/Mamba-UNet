@@ -4,6 +4,18 @@
 </div>
 
 
+
+## Contents ###
+- [Work List](#Work List)
+- [Graphical Abstract](#Graphical Abstract)
+- [Results](#Results)
+- [Requirements](#Requirements)
+- [Usage](#Usage)
+- [Q&A](#Q&A)
+- [Reference](#reference)
+ 
+
+
 ## Work List 
 
 Project
@@ -22,8 +34,10 @@ Code
 More Experiments
 - [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset [[Official]](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html)
 - [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset [[Official]](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480)
-- [x] Dataset with Prostate MR MICCAI Challenge Dataset [[Official]](https://promise12.grand-challenge.org/)
+- [x] Dataset with PROMISE12 Prostate MR MICCAI Challenge Dataset [[Official]](https://promise12.grand-challenge.org/)
 - [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
+
+
 
 
 ## Graphical Abstract
@@ -71,6 +85,7 @@ VMambaMorph
 <sub>Mamba-UNet: All the baseline methods/datasets are with same hyper-parameter setting (10,000 iterations, learning rate, optimizer and etc).</sub> <br>
 <sub>VMambaMorph: All the baseline methods are with same hyper-parameter setting (300 epoches, learning rate, optimizer and etc).</sub>
 
+
 ## Requirements
 * Pytorch, MONAI 
 * Some basic python packages: Torchio, Numpy, Scikit-image, SimpleITK, Scipy, Medpy, nibabel, tqdm ......
@@ -106,8 +121,9 @@ Download ACDC for Semi-/Supervised learning through [Google Drive](https://drive
 
 Download ACDC for Weak-Supervised learning through [Google Drive](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), and save in 'data' folder.
 
-Download Multi-Atlas Abdomen Labeling Challenge Dataset through Official Website [Link](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480), or [Google Drive](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), and save in 'data/Synapse' folder.
+Download Synapse Multi-Atlas Abdomen Labeling Challenge Dataset through Official Website [Link](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480), or [Google Drive](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), and save in 'data/Synapse' folder.
 
+Download PROMISE12 MRI Prostate Segmentation Dataset through [Google Drive](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing), and save in 'data/Prostate' folder. 
 
 4. Train 2D UNet
 ```shell
@@ -126,52 +142,52 @@ python train_fully_supervised_2D_VIM.py --root_path ../data/ACDC --exp ACDC/VIM 
 
 7. Train Semi-Mamba-UNet when 5% as labeled data
 ```shell
-python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
+python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
 ```
 
 8. Train Semi-Mamba-UNet when 10% as labeled data
 ```shell
-python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
+python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
 ```
 
 9. Train UNet with Mean Teacher when 5% as labeled data
 ```shell
-python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
+python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
 ```
 
 10. Train SwinUNet with Mean Teacher when 5% as labeled data
 ```shell
-python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
+python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
 ```
 
 11. Train UNet with Mean Teacher when 10% as labeled data
 ```shell
-python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
+python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
 ```
 
 12. Train SwinUNet with Mean Teacher when 10% as labeled data
 ```shell
-python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
+python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
 ```
 
 13. Train UNet with Uncertainty Aware Mean Teacher when 5% as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
+python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
 ```
 
 14. Train SwinUNet with Uncertainty Aware Mean Teacher when 5% as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_bs 8
+python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
 ```
 
 15. Train UNet with Uncertainty Aware Mean Teacher when 10% as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
+python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
 ```
 
 16. Train SwinUNet with Uncertainty Aware Mean Teacher when 10% as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_bs 8
+python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
 ```
 
 17. Test

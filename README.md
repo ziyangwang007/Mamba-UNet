@@ -23,18 +23,19 @@ Project
 - [x] Semi-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/SemiMambaUNet.pdf) 
 - [x] Weak-Mamba-UNet -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/WeakMambaUNet.pdf)
 - [x] VMambaMorph -> [[Paper Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/pdf/VMambaMorph.pdf)
-
+- [x] Survey on Visual Mamba -> [[Paper Link]](https://arxiv.org/abs/2404.15956)
 
 Code
 - [x] Code for Mamba-UNet -> [[Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_fully_supervised_2D_VIM.py)
 - [x] Code for Semi-Mamba-UNet -> [[Link]](https://github.com/ziyangwang007/Mamba-UNet/blob/main/code/train_Semi_Mamba_UNet.py)
 - [x] Code for Weak-Mamba-UNet -> [[Link]](https://github.com/ziyangwang007/Weak-Mamba-UNet)
 - [x] Code for VMambaMorph -> [[Link]](https://github.com/ziyangwang007/VMambaMorph)
+- [x] Paper List for Visual Mamba -> [[Link]](https://github.com/ziyangwang007/Awesome-Visual-Mamba)
 
 More Experiments
-- [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset [[Official]](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html)
-- [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset [[Official]](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480)
-- [x] Dataset with PROMISE12 Prostate MR MICCAI Challenge Dataset [[Official]](https://promise12.grand-challenge.org/)
+- [x] Dataset with ACDC MRI Cardiac MICCAI Challenge Dataset  -> [[Official]](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html)
+- [x] Dataset with Synapse CT Abdomen MICCAI Challenge Dataset  -> [[Official]](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480)
+- [x] Dataset with PROMISE12 Prostate MR MICCAI Challenge Dataset  -> [[Official]](https://promise12.grand-challenge.org/)
 - [ ] Dataset with TotalSegmentator  (in Progress, released soon.)
 
 
@@ -140,62 +141,94 @@ python train_fully_supervised_2D_ViT.py --root_path ../data/ACDC --exp ACDC/swin
 python train_fully_supervised_2D_VIM.py --root_path ../data/ACDC --exp ACDC/VIM --model mambaunet --max_iterations 10000 --batch_size 24 
 ```
 
-7. Train Semi-Mamba-UNet when 5% as labeled data
+7. Train Semi-Mamba-UNet when 3 cases as labeled data
 ```shell
-python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
+python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 3 --batch_size 16 
 ```
 
-8. Train Semi-Mamba-UNet when 10% as labeled data
+8. Train Semi-Mamba-UNet when 7 cases as labeled data
 ```shell
-python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
+python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 7 --batch_size 16 
 ```
 
-9. Train UNet with Mean Teacher when 5% as labeled data
+
+9. Train Semi-Mamba-UNet when 8 cases as labeled data
 ```shell
-python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
+python train_Semi_Mamba_UNet.py --root_path ../data/Prostate --exp Prostate/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 8 --batch_size 16 
 ```
 
-10. Train SwinUNet with Mean Teacher when 5% as labeled data
+10. Train Semi-Mamba-UNet when 12 cases as labeled data
 ```shell
-python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
+python train_Semi_Mamba_UNet.py --root_path ../data/Prostate --exp Prostate/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 12 --batch_size 16 
 ```
 
-11. Train UNet with Mean Teacher when 10% as labeled data
+11. Train UNet with Mean Teacher when 3 cases as labeled data
 ```shell
-python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
+python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --
 ```
 
-12. Train SwinUNet with Mean Teacher when 10% as labeled data
+12. Train SwinUNet with Mean Teacher when 3 cases as labeled data
 ```shell
-python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
+python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 
 ```
 
-13. Train UNet with Uncertainty Aware Mean Teacher when 5% as labeled data
+13. Train UNet with Mean Teacher when 7 cases as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
+python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16
 ```
 
-14. Train SwinUNet with Uncertainty Aware Mean Teacher when 5% as labeled data
+14. Train SwinUNet with Mean Teacher when 7 cases as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --labeled_num 8
+python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 
 ```
 
-15. Train UNet with Uncertainty Aware Mean Teacher when 10% as labeled data
+15. Train UNet with Mean Teacher when 8 cases as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
+python train_mean_teacher_2D.py --root_path ../data/Prostate --model unet --exp Prostate/Mean_Teacher --max_iterations 30000 --labeled_num 8 --batch_size 16 --
 ```
 
-16. Train SwinUNet with Uncertainty Aware Mean Teacher when 10% as labeled data
+16. Train SwinUNet with Mean Teacher when 8 cases as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --labeled_num 8
+python train_mean_teacher_ViT.py --root_path ../data/Prostate --model swinunet --exp Prostate/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 8 --batch_size 16 
 ```
 
-17. Test
+17. Train UNet with Mean Teacher when 12 cases as labeled data
+```shell
+python train_mean_teacher_2D.py --root_path ../data/Prostate --model unet --exp Prostate/Mean_Teacher --max_iterations 30000 --labeled_num 12 --batch_size 16
+```
+
+18. Train SwinUNet with Mean Teacher when 12 cases as labeled data
+```shell
+python train_mean_teacher_ViT.py --root_path ../data/Prostate --model swinunet --exp Prostate/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 12 --batch_size 16 
+```
+
+19. Train UNet with Uncertainty Aware Mean Teacher when 3 cases as labeled data
+```shell
+python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 
+```
+
+20. Train SwinUNet with Uncertainty Aware Mean Teacher when 3 cases as labeled data
+```shell
+python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16
+```
+
+21. Train UNet with Uncertainty Aware Mean Teacher when 7 cases as labeled data
+```shell
+python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 
+```
+
+22. Train SwinUNet with Uncertainty Aware Mean Teacher when 7 cases as labeled data
+```shell
+python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 
+```
+
+23. Test
 ```shell
 python test_2D_fully.py --root_path ../data/ACDC --exp ACDC/xxx --model xxx
 ```
 
-18. Image Registration
+
+24. For Image Registration
 
 The training and testing for VoxelMorph, TransMorph, MambaMorph, and VMambaMorph can be checked through [[Link]](https://github.com/ziyangwang007/VMambaMorph)
 
@@ -250,6 +283,13 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 },
   author={Wang, Ziyang and Zheng, Jian-Qing and Ma, Chao and Guo, Tao},
   journal={arXiv preprint arXiv:2404.05105},
+  year={2024}
+}
+
+@article{zhang2024survey,
+  title={A Survey on Visual Mamba},
+  author={Zhang, Hanwei and Zhu, Ying and Wang, Dan and Zhang, Lijun and Chen, Tianxiang and Wang, Ziyang and Ye, Zi},
+  journal={arXiv preprint arXiv:2404.15956},
   year={2024}
 }
 ```

@@ -6,8 +6,8 @@
 
 
 ## Contents ###
-- [Work List](#Work List)
-- [Graphical Abstract](#Graphical Abstract)
+- [Work List](#Work-List)
+- [Graphical Abstract](#Graphical-Abstract)
 - [Results](#Results)
 - [Requirements](#Requirements)
 - [Usage](#Usage)

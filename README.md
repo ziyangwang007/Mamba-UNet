@@ -13,7 +13,7 @@
 - [Usage](#Usage)
 - [Q&A](#Q&A)
 - [Reference](#reference)
- 
+- [Contact](#Contact)
 
 
 ## Work List 
@@ -288,8 +288,7 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 }
 
 @article{wang2024vmambamorph,
-  title={VMambaMorph: a Multi-Modality Deformable Image Registration Framework based on Visual State Space Model with Cross-Scan Module
-},
+  title={VMambaMorph: a Multi-Modality Deformable Image Registration Framework based on Visual State Space Model with Cross-Scan Module},
   author={Wang, Ziyang and Zheng, Jian-Qing and Ma, Chao and Guo, Tao},
   journal={arXiv preprint arXiv:2404.05105},
   year={2024}

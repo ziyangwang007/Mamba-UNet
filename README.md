@@ -114,52 +114,58 @@ cd Mamba-UNet
 
 2. Download Pretrained Model
 
-Download through [Google Drive](https://drive.google.com/file/d/14RzbbBDjbKbgr0ordKlWbb69EFkHuplr/view?usp=sharing) for SwinUNet, and [Google Drive](https://drive.google.com/file/d/1uUPsr7XeqayCxlspqBHbg5zIWx0JYtSX/view?usp=sharing) for Mamba-UNet, and save in 'code/pretrained_ckpt'.
+Download through [Google Drive](https://drive.google.com/file/d/14RzbbBDjbKbgr0ordKlWbb69EFkHuplr/view?usp=sharing) for SwinUNet, and [[Google Drive]](https://drive.google.com/file/d/1uUPsr7XeqayCxlspqBHbg5zIWx0JYtSX/view?usp=sharing) for Mamba-UNet, and save in `../code/pretrained_ckpt`.
 
 3. Download Dataset
 
-Download ACDC for Semi-/Supervised learning through [Google Drive](https://drive.google.com/file/d/1F3JzBSIURtFJkfcExBcT6Hu7Ar5_f8uv/view?usp=sharing), and save in 'data/ACDC' folder. 
+3.1 Download ACDC for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1F3JzBSIURtFJkfcExBcT6Hu7Ar5_f8uv/view?usp=sharing) or [[Baidu Netdisk]](https://pan.baidu.com/s/1LS6VHujD8kvuQikbydOibQ) with passcode: 'kafc', and save in `../data/ACDC` folder. 
 
-Download ACDC for Weak-Supervised learning through [Google Drive](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), and save in 'data' folder.
+3.2 Download ACDC for Weak-Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), and save in `../data` folder.
 
-Download Synapse Multi-Atlas Abdomen Labeling Challenge Dataset through Official Website [Link](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480), or [Google Drive](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), and save in 'data/Synapse' folder.
+3.3 Download Synapse for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), and save in `../data/Synapse` folder.
 
-Download PROMISE12 MRI Prostate Segmentation Dataset through [Google Drive](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing), and save in 'data/Prostate' folder. 
+3.4 Download PROMISE12 for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing), and save in `../data/Prostate` folder. 
 
 4. Train 2D UNet
 ```shell
-python train_fully_supervised_2D.py --root_path ../data/ACDC --exp ACDC/unet --model unet --max_iterations 10000 --batch_size 24
+python train_fully_supervised_2D.py --root_path ../data/ACDC --exp ACDC/unet --model unet --max_iterations 10000 --batch_size 24 --num_classes 4 
+
+python train_fully_supervised_2D.py --root_path ../data/Prostate --exp Prostate/unet --model unet --max_iterations 10000 --batch_size 24 --num_classes 2
 ```
 
 5. Train SwinUNet
 ```shell
-python train_fully_supervised_2D_ViT.py --root_path ../data/ACDC --exp ACDC/swinunet --model swinunet --max_iterations 10000 --batch_size 24
+python train_fully_supervised_2D_ViT.py --root_path ../data/ACDC --exp ACDC/swinunet --model swinunet --max_iterations 10000 --batch_size 24 --num_classes 4 
+
+python train_fully_supervised_2D_ViT.py --root_path ../data/Prostate --exp Prostate/swinunet --model swinunet --max_iterations 10000 --batch_size 24 --num_classes 2 
 ```
 
 6. Train Mamba-UNet
 ```shell
-python train_fully_supervised_2D_VIM.py --root_path ../data/ACDC --exp ACDC/VIM --model mambaunet --max_iterations 10000 --batch_size 24 
+python train_fully_supervised_2D_VIM.py --root_path ../data/ACDC --exp ACDC/VIM --model mambaunet --max_iterations 10000 --batch_size 24  --num_classes 4 
+
+python train_fully_supervised_2D_VIM.py --root_path ../data/Prostate --exp Prostate/VIM --model mambaunet --max_iterations 10000 --batch_size 24  --num_classes 2
 ```
 
 7. Train Semi-Mamba-UNet when 3 cases as labeled data
 ```shell
-python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 3 --batch_size 16 
+python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 3 --batch_size 16  --num_classes 4
 ```
 
 8. Train Semi-Mamba-UNet when 7 cases as labeled data
 ```shell
-python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 7 --batch_size 16 
+python train_Semi_Mamba_UNet.py --root_path ../data/ACDC --exp ACDC/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 7 --batch_size 16  --num_classes 4 
 ```
 
 
 9. Train Semi-Mamba-UNet when 8 cases as labeled data
 ```shell
-python train_Semi_Mamba_UNet.py --root_path ../data/Prostate --exp Prostate/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 8 --batch_size 16 
+python train_Semi_Mamba_UNet.py --root_path ../data/Prostate --exp Prostate/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 8 --batch_size 16  --num_classes 2
 ```
 
 10. Train Semi-Mamba-UNet when 12 cases as labeled data
 ```shell
-python train_Semi_Mamba_UNet.py --root_path ../data/Prostate --exp Prostate/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 12 --batch_size 16 
+python train_Semi_Mamba_UNet.py --root_path ../data/Prostate --exp Prostate/Semi_Mamba_UNet --max_iterations 30000 --labeled_num 12 --batch_size 16 --num_classes 2
 ```
 
 11. Train UNet with Mean Teacher when 3 cases as labeled data
@@ -174,52 +180,52 @@ python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp
 
 13. Train UNet with Mean Teacher when 7 cases as labeled data
 ```shell
-python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16
+python train_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --num_classes 4 
 ```
 
 14. Train SwinUNet with Mean Teacher when 7 cases as labeled data
 ```shell
-python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 
+python train_mean_teacher_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --num_classes 4 
 ```
 
 15. Train UNet with Mean Teacher when 8 cases as labeled data
 ```shell
-python train_mean_teacher_2D.py --root_path ../data/Prostate --model unet --exp Prostate/Mean_Teacher --max_iterations 30000 --labeled_num 8 --batch_size 16 --
+python train_mean_teacher_2D.py --root_path ../data/Prostate --model unet --exp Prostate/Mean_Teacher --max_iterations 30000 --labeled_num 8 --batch_size 16 --num_classes 2
 ```
 
 16. Train SwinUNet with Mean Teacher when 8 cases as labeled data
 ```shell
-python train_mean_teacher_ViT.py --root_path ../data/Prostate --model swinunet --exp Prostate/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 8 --batch_size 16 
+python train_mean_teacher_ViT.py --root_path ../data/Prostate --model swinunet --exp Prostate/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 8 --batch_size 16  --num_classes 2
 ```
 
 17. Train UNet with Mean Teacher when 12 cases as labeled data
 ```shell
-python train_mean_teacher_2D.py --root_path ../data/Prostate --model unet --exp Prostate/Mean_Teacher --max_iterations 30000 --labeled_num 12 --batch_size 16
+python train_mean_teacher_2D.py --root_path ../data/Prostate --model unet --exp Prostate/Mean_Teacher --max_iterations 30000 --labeled_num 12 --batch_size 16 --num_classes 2
 ```
 
 18. Train SwinUNet with Mean Teacher when 12 cases as labeled data
 ```shell
-python train_mean_teacher_ViT.py --root_path ../data/Prostate --model swinunet --exp Prostate/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 12 --batch_size 16 
+python train_mean_teacher_ViT.py --root_path ../data/Prostate --model swinunet --exp Prostate/Mean_Teacher_ViT --max_iterations 30000 --labeled_num 12 --batch_size 16  --num_classes 2
 ```
 
 19. Train UNet with Uncertainty Aware Mean Teacher when 3 cases as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 
+python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 3 --batch_size 16 --num_classes 4 
 ```
 
 20. Train SwinUNet with Uncertainty Aware Mean Teacher when 3 cases as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16
+python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 3 --batch_size 16 --num_classes 4 
 ```
 
 21. Train UNet with Uncertainty Aware Mean Teacher when 7 cases as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 
+python train_uncertainty_aware_mean_teacher_2D.py --root_path ../data/ACDC --model unet --exp ACDC/Uncertainty_Aware_Mean_Teacher --max_iterations 30000 --labeled_num 7 --batch_size 16 --num_classes 4 
 ```
 
 22. Train SwinUNet with Uncertainty Aware Mean Teacher when 7 cases as labeled data
 ```shell
-python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 
+python train_uncertainty_aware_mean_teacher_2D_ViT.py --root_path ../data/ACDC --model swinunet --exp ACDC/Uncertainty_Aware_Mean_Teacher_ViT --max_iterations 30000 --labeled_num 7 --batch_size 16 --num_classes 4 
 ```
 
 23. Test
@@ -232,6 +238,9 @@ python test_2D_fully.py --root_path ../data/ACDC --exp ACDC/xxx --model xxx
 
 The training and testing for VoxelMorph, TransMorph, MambaMorph, and VMambaMorph can be checked through [[Link]](https://github.com/ziyangwang007/VMambaMorph)
 
+24. For Weakly Supervised Image Segmentation
+
+The training and testing for pCE, Weak-Mamba-UNet can be checked through [[Link]](https://github.com/ziyangwang007/Weak-Mamba-UNet)
 
 ## Q&A
 

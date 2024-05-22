@@ -120,13 +120,18 @@ Download through [Google Drive](https://drive.google.com/file/d/14RzbbBDjbKbgr0o
 
 3.1 Download ACDC for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1F3JzBSIURtFJkfcExBcT6Hu7Ar5_f8uv/view?usp=sharing) or [[Baidu Netdisk]](https://pan.baidu.com/s/1LS6VHujD8kvuQikbydOibQ) with passcode: 'kafc', and save in `../data/ACDC` folder. 
 
-3.2 Download ACDC for Weak-Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), and save in `../data` folder.
+3.2 Download ACDC for Weak-Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), or [[Baidu Netdisk]](https://pan.baidu.com/s/1dHkp9daqE3kLEbAP6zl7Jw) with passcode: 'rwv2', and save in `../data/ACDC` folder.
 
 3.3 Download Synapse for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), or [[Baidu Netdisk]](https://pan.baidu.com/s/1yDE3j1mVedSfVe29T3U33Q) with passcode 'rwf7' and save in `../data/Synapse` folder.
 
 3.4 Download PROMISE12 for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing), or [[Baidu Netdisk]](https://pan.baidu.com/s/1cfCX2tfnV6fnDAHH12rg6A) with passcode '6dss' and save in `../data/Prostate` folder. 
 
 4. Train 2D UNet
+```shell
+cd code
+```
+
+
 ```shell
 python train_fully_supervised_2D.py --root_path ../data/ACDC --exp ACDC/unet --model unet --max_iterations 10000 --batch_size 24 --num_classes 4 
 

@@ -34,9 +34,9 @@ Code
 
 More Experiments
 - [x] Dataset of ACDC MRI Cardiac MICCAI Challenge  -> [[Official]](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html) [[Google Drive]](https://drive.google.com/file/d/1F3JzBSIURtFJkfcExBcT6Hu7Ar5_f8uv/view?usp=sharing) [[Baidu Netdisk]](https://pan.baidu.com/s/1LS6VHujD8kvuQikbydOibQ)
-- [x] Dataset of Synapse CT Abdomen MICCAI Challenge  -> [[Official]](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480) [[Google Drive]](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing)
-- [x] Dataset of PROMISE12 Prostate MR MICCAI Challenge  -> [[Official]](https://promise12.grand-challenge.org/) [[Google Drive]](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing)
-- [ ] Dataset of TotalSegmentator  (in Progress, released soon.)
+- [x] Dataset of Synapse CT Abdomen MICCAI Challenge  -> [[Official]](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480) [[Google Drive]](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing) [[Baidu Netdisk]](https://pan.baidu.com/s/1yDE3j1mVedSfVe29T3U33Q)
+- [x] Dataset of PROMISE12 Prostate MR MICCAI Challenge  -> [[Official]](https://promise12.grand-challenge.org/) [[Google Drive]](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing) [[Baidu Netdisk]](https://pan.baidu.com/s/1cfCX2tfnV6fnDAHH12rg6A)
+- [ ] Dataset of TotalSegmentator  (released soon.) -> [[Official]](https://totalsegmentator.com/) 
 
 
 
@@ -122,9 +122,9 @@ Download through [Google Drive](https://drive.google.com/file/d/14RzbbBDjbKbgr0o
 
 3.2 Download ACDC for Weak-Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), and save in `../data` folder.
 
-3.3 Download Synapse for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), and save in `../data/Synapse` folder.
+3.3 Download Synapse for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing), or [[Baidu Netdisk]](https://pan.baidu.com/s/1yDE3j1mVedSfVe29T3U33Q) with passcode 'rwf7' and save in `../data/Synapse` folder.
 
-3.4 Download PROMISE12 for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing), and save in `../data/Prostate` folder. 
+3.4 Download PROMISE12 for Semi-/Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing), or [[Baidu Netdisk]](https://pan.baidu.com/s/1cfCX2tfnV6fnDAHH12rg6A) with passcode '6dss' and save in `../data/Prostate` folder. 
 
 4. Train 2D UNet
 ```shell

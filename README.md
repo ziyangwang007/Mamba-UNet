@@ -36,6 +36,13 @@ More Experiments
 - [x] Dataset of ACDC MRI Cardiac MICCAI Challenge  -> [[Official]](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html) [[Google Drive]](https://drive.google.com/file/d/1F3JzBSIURtFJkfcExBcT6Hu7Ar5_f8uv/view?usp=sharing) [[Baidu Netdisk]](https://pan.baidu.com/s/1LS6VHujD8kvuQikbydOibQ)
 - [x] Dataset of Synapse CT Abdomen MICCAI Challenge  -> [[Official]](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480) [[Google Drive]](https://drive.google.com/file/d/1pO_YBx_3OCzadYQXzKsUqmXH6Ghv-z2y/view?usp=sharing) [[Baidu Netdisk]](https://pan.baidu.com/s/1yDE3j1mVedSfVe29T3U33Q)
 - [x] Dataset of PROMISE12 Prostate MR MICCAI Challenge  -> [[Official]](https://promise12.grand-challenge.org/) [[Google Drive]](https://drive.google.com/file/d/1jboocJQq3VP0CowK0xrnPV5aqKQhqUaW/view?usp=sharing) [[Baidu Netdisk]](https://pan.baidu.com/s/1cfCX2tfnV6fnDAHH12rg6A)
+- [ ] Dataset of GLAS  (released soon.) -> [[Official]](https://www.kaggle.com/datasets/sani84/glasmiccai2015-gland-segmentation/) 
+- [ ] Dataset of 2018DSB  (released soon.) -> [[Official]](https://www.kaggle.com/competitions/data-science-bowl-2018/) 
+- [ ] Dataset of BUSI  (released soon.) -> [[Official]](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset/) 
+- [ ] Dataset of CVC-ClinicDB  (released soon.) -> [[Official]](https://paperswithcode.com/dataset/cvc-clinicdb/) 
+- [ ] Dataset of Kvasir-SEG  (released soon.) -> [[Official]](https://arxiv.org/abs/1911.07069/) 
+- [ ] Dataset of ISIC2016  (released soon.) -> [[Official]](https://challenge.isic-archive.com/landing/2016//) 
+- [ ] Dataset of PH2  (released soon.) -> [[Official]](https://ieeexplore.ieee.org/document/6610779/) 
 - [ ] Dataset of TotalSegmentator  (released soon.) -> [[Official]](https://totalsegmentator.com/) 
 
 
@@ -265,7 +272,11 @@ A: I am glad to see and acknowledge that there should be similar work. Mamba is 
 
 A: I recommend to start with UNet, as it often proves to be the most efficient architecture. Based on my experience with various segmentation datasets, UNet can outperform alternatives like TransUNet and SwinUNet. Therefore, UNet should be your first choice. Transformer-based UNet variants, which depend on pretraining, have shown promising results, especially with larger datasets—although such extensive datasets are uncommon in medical imaging. In my view, MambaUNet not only offers greater efficiency but also more promising performance compared to Transformer-based UNet. However, it's crucial to remember that MambaUNet, like Transformer, necessitates pretraining (e.g. on ImageNet).
 
-5. Q: Colloboration: Could I discuss with you about other topic, like Image Registration, Human Pose Estimation, Image Fusion, and etc.
+5. Q: Environment Development: I am facing problems with setting up the environment to run Mamba.
+A: I am not an expert, especially when it comes to tackling different situations or PCs. From my experience, I found that PyTorch 2.3.0 doesn't work well. Additionally, please do not use a Windows system to test the code. I recommend using PyTorch 2.1.0, CUDA 12.1, and the latest causal-conv1d==1.2.2.post1. This configuration works on my RTX 3090 GPU. You can also check or raise an issue on the following resources: [[PyPI (mamba-ssm)]](https://pypi.org/project/mamba-ssm/), [[Official GitHub (mamba)]](https://github.com/state-spaces/mamba), [[PyPI (causal-conv1d)]](https://pypi.org/project/causal-conv1d/) , [[GitHub (causal-conv1d)]](https://github.com/Dao-AILab/causal-conv1d).
+
+
+6. Q: Colloboration: Could I discuss with you about other topic, like Image Registration, Human Pose Estimation, Image Fusion, and etc.
 
 A: I would also like to do some amazing work. Connect with me via ziyang [dot] wang17 [at] gmail [dot] com.
 

@@ -290,11 +290,15 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
   journal={arXiv preprint arXiv:2402.05079},
   year={2024}
 }
-@article{ma2024semimamba,
-  title={Semi-Mamba-UNet: Pixel-Level Contrastive and Pixel-Level Cross-Supervised Visual Mamba-based UNet for Semi-Supervised Medical Image Segmentation},
+
+@article{ma2024semi,
+  title={Semi-Mamba-UNet: Pixel-level contrastive and cross-supervised visual Mamba-based UNet for semi-supervised medical image segmentation},
   author={Ma, Chao and Wang, Ziyang},
-  journal={arXiv preprint arXiv:2402.07245},
-  year={2024}
+  journal={Knowledge-Based Systems},
+  volume={300},
+  pages={112203},
+  year={2024},
+  publisher={Elsevier}
 }
 
 @article{wang2024weakmamba,
@@ -312,10 +316,14 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 }
 
 @article{zhang2024survey,
-  title={A Survey on Visual Mamba},
+  title={A survey on visual mamba},
   author={Zhang, Hanwei and Zhu, Ying and Wang, Dan and Zhang, Lijun and Chen, Tianxiang and Wang, Ziyang and Ye, Zi},
-  journal={arXiv preprint arXiv:2404.15956},
-  year={2024}
+  journal={Applied Sciences},
+  volume={14},
+  number={13},
+  pages={5683},
+  year={2024},
+  publisher={MDPI}
 }
 ```
 

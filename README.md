@@ -4,6 +4,9 @@
 </div>
 
 
+I am the first and/or corresponding author of Mamba-UNet, Semi-Mamba-UNet, Weak-Mamba-UNet, and VMambaMorph.
+
+For collaborations, please contact: ziyangwang [at] ieee [dot] org
 
 ## Contents ###
 - [Work List](#Work-List)
@@ -301,18 +304,21 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
   publisher={Elsevier}
 }
 
-@article{wang2024weakmamba,
-  title={Weak-Mamba-UNet: Visual Mamba Makes CNN and ViT Work Better for Scribble-based Medical Image Segmentation},
-  author={Wang, Ziyang and Ma, Chao},
-  journal={arXiv preprint arXiv:2402.10887},
-  year={2024}
+@article{wang2026weak,
+  title={Weak-mamba-unet: Visual mamba makes cnn and vit work better for scribble-based medical image segmentation},
+  author={Wang, Ziyang and Tao, Tianli and Ge, Yiyuan and Chen, Zhihao and Chen, Tianxiang and Ye, Zi and Lei, Yongxiang},
+  journal={IEEE Transactions on Biomedical Engineering},
+  year={2026},
+  publisher={IEEE}
 }
 
-@article{wang2024vmambamorph,
-  title={VMambaMorph: a Multi-Modality Deformable Image Registration Framework based on Visual State Space Model with Cross-Scan Module},
-  author={Wang, Ziyang and Zheng, Jian-Qing and Ma, Chao and Guo, Tao},
-  journal={arXiv preprint arXiv:2404.05105},
-  year={2024}
+@inproceedings{wang2026vmambamorph,
+  title={VMambaMorph: A 3D multi-modality deformable image registration framework based on visual state space model with cross-scan module},
+  author={Wang, Ziyang and Zheng, Jianqing and Lei, Yongxiang and Tao, Tianli and Zuo, Kaiwen and Zhou, Wei},
+  booktitle={ICASSP 2026-2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={8847--8851},
+  year={2026},
+  organization={IEEE}
 }
 
 @article{zhang2024survey,
@@ -331,7 +337,7 @@ A: I would also like to do some amazing work. Connect with me via ziyang [dot] w
 
 ## Contact
 
-ziyang [dot] wang17 [at] gmail [dot] com
+ziyangwang [at] ieee [dot] org
 
 
 ## Acknowledgement

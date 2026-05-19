@@ -4,9 +4,15 @@
 </div>
 
 
-I am the first and/or corresponding author of Mamba-UNet, Semi-Mamba-UNet, Weak-Mamba-UNet, and VMambaMorph.
+<p>
+I am the first/corresponding author of <b>Mamba-UNet</b>, <b>Semi-Mamba-UNet</b>, <b>Weak-Mamba-UNet</b>, and <b>VMambaMorph</b>.
+</p>
 
-For collaborations, please contact: ziyangwang [at] ieee [dot] org
+<p>
+📧 <b>For collaborations, please contact:</b> ziyangwang [at] ieee [dot] org
+</p>
+
+</div>
 
 ## Contents ###
 - [Work List](#Work-List)
